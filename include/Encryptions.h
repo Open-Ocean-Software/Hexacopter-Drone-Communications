@@ -20,8 +20,24 @@
 
 extern Encryption Encryptions [];
 
+/**
+ * Finds the encryption algorithm with the given name.
+ * @param  name The name of the encryption algorithm
+ * @return      The selected encryption algorithm
+ */
 Encryption *FindEncryption (char name[]);
+/**
+ * Tries to find the encryption algorithm with the given name.
+ * @param  name       The name of the encryption algorithm
+ * @param  encryption The selected encryption algorithm
+ * @return            Success code
+ */
 uint8_t TryFindEncryption (char name[], Encryption *encryption);
+/**
+ * Checks whether or not the encryption algorithm exists.
+ * @param  name The name of the encryption algorithm
+ * @return      Success code
+ */
 uint8_t EncryptionExists (char name[]);
 
 #endif

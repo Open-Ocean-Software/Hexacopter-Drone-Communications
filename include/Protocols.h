@@ -24,8 +24,24 @@
 
 extern Protocol Protocols [];
 
+/**
+ * Finds the protocol with the given name.
+ * @param  name The name of the protocol
+ * @return      The selected protocol
+ */
 Protocol *FindProtocol (char name[]);
+/**
+ * Tries to find the protocol with the given name.
+ * @param  name     The name of the protocol
+ * @param  protocol The selected protocol
+ * @return          Success code
+ */
 uint8_t TryFindProtocol (char name[], Protocol *protocol);
+/**
+ * Checks if the protocol with the given name exists.
+ * @param  name The name of the protocol
+ * @return      Success code
+ */
 uint8_t ProtocolExists (char name[]);
 
 #endif

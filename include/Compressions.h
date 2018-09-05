@@ -20,8 +20,24 @@
 
 extern Compression Compressions [];
 
+/**
+ * Finds the compression algorithm with the given name.
+ * @param  name The name of the algorithm
+ * @return      The compression algorithm
+ */
 Compression *FindCompression (char name[]);
+/**
+ * Tries to find the compression algorithm with the given name.
+ * @param  name        The name of the algorithm
+ * @param  compression The compression algorithm
+ * @return             Success code
+ */
 uint8_t TryFindCompression (char name[], Compression *compression);
+/**
+ * Checks if the compression algorithm name exists.
+ * @param  name The name of the algorithm.
+ * @return      Whether or not the compression algorithm exists.
+ */
 uint8_t CompressionExists (char name[]);
 
 #endif
