@@ -41,6 +41,7 @@ void TransmitByteSPI (uint8_t data)
 
 void ReceiveSPI (uint8_t *data, int length)
 {
+    data = malloc(sizeof(uint8_t) * length);
     for (int i = 0; i < length; i++) {
         ReceiveByteSPI(&(data[i]));
     }
@@ -53,6 +54,7 @@ void ReceiveByteSPI (uint8_t *data)
 
 void TransceiveSPI (uint8_t *transmit, uint8_t *receive, int length)
 {
+    receive = malloc(sizeof(uint8_t) * length);
     for (int i = 0; i < length; i++) {
         TransceiveByteSPI(transmit[i], &(receive[i]));
     }
